@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+    <meta charset="UTF-8">
+    <title>Wazzuf Analysis</title>
+    <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.min.css"
+          integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.css"
+          integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw=="
+          crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
+
+</head>
+<body>
+
+<!--Nav-bar-->
+<nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top px-4 shadow-sm">
+    <a class="navbar-brand text-dark " href="#">
+        <img src="http://localhost:8080/images/logo.png" width="30" height="28" class="d-inline-block align-top"/>
+        Wuzzuf Analysis
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#team"><small>  Team Members </small> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#display"><small>  Display Data </small> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#visualization"> <small>  Visualizations </small> </a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#contact"> <small>  Contact us  </small> </a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+
+<!-- Hero Section -->
+<section id="hero" class="hero d-flex align-items-center bg-light">
+    <div class="container my-auto">
+        <div class="row">
+            <div class="col-md-6 d-flex flex-column justify-content-center">
+                <h1 data-aos="fade-up">Wuzzuf Dataset Analysis
+                    <span class="text-primary"> Java </span> for ML Course </h1>
+                <p data-aos="fade-up" data-aos-delay="400" class="text-muted my-4 py-3">
+                    We are team of java programmers trying to build websites using springboot </p>
+                <a class="btn btn-primary w-50" href="#how">
+                    How it works !
+                </a>
+            </div>
+            <div class="col-md-6 hero-img mb-auto" data-aos="zoom-out" data-aos-delay="200">
+                <img src="http://localhost:8080/images/8.svg" class="img-fluid" alt="">
+            </div>
+        </div>
+    </div>
+</section><!-- End Hero -->
+
+
+
+
+<!--Team Memebers page-->
+<section id="team" class="py-5">
+    <div id="" class="pt-3">
+        <div class="container">
+            <div class="text-center mb-5">
+                <h5 class="text-dark header-color-custom">Team Members</h5>
+                <p class="text-muted">This team is formed to create a springboot application that process a kaggle dataset using spark</p>
+            </div>
+            <div class="row slider">
+                <div class="col-md-12 pb-4">
+                    <a href="" >
+                        <div class="box">
+                            <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/amr.jpg">
+                            <h6 class="name text-dark">Dr.Amr El-Shafeay</h6>
+                            <p class="title">Supervisor</p>
+                            <p class="description text-muted">Chairman assistant for training and java department head at ITI. </p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-12 pb-4">
+                    <a href="" >
+                        <div class="box">
+                            <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/omar.png">
+                            <h6 class="name text-dark">Omar Marie</h6>
+                            <p class="title">ML Engineer</p>
+                            <p class="description text-muted">Software engineer. AI and machine learning engineer at ITI</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-12 pb-4">
+                    <a href="" >
+                        <div class="box">
+                            <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/ramez.jpg">
+                            <h6 class="name text-dark">Ramez Essam</h6>
+                            <p class="title">ML Engineer</p>
+                            <p class="description text-muted">Electrical engineer interested in software development field. AI and machine learning engineer at ITI</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-12 pb-4">
+                    <a href="">
+                        <div class="box">
+                            <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/atef.jpg">
+                            <h6 class="name text-dark">Muhamed Atef</h6>
+                            <p class="title">ML Engineer</p>
+                            <p class="description text-muted">Pythonista. AI and machine learning engineer at ITI</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-12 pb-4">
+                    <a href="" >
+                        <div class="box">
+                            <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/shaban.jpg">
+                            <h6 class="name text-dark">Mohamed Shaban</h6>
+                            <p class="title">ML Engineer</p>
+                            <p class="description text-muted"> Fresh Graduate Petroleum Engineer. AI and machine learning engineer at ITI</p>
+                            <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Display Data-->
+<section id="display" class="py-5 bg-light">
+    <div class="container">
+        <p class="h5 pt-4 header-color-custom">Display and Explore Wuzzuf Dataset !</p>
+        <p class="text-muted mb-5"> The first step of data analysis is to explore the dataset to get insights...
+        in the cards below we included tasks 1,2,3 and 10 of the final project.</p>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/display-data" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 p-4">
+                            <img src="http://localhost:8080/images/data.png" class="w-100 img-fluid" alt="Display data">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark">1. Display sample from dataset</h6>
+                                <p class="card-text"><small class="text-muted">Click here to view a table that contains some
+                                of the dataset in which we have prepared</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 p-4">
+                            <img src="http://localhost:8080/images/summary.png" class="w-100 img-fluid" alt="Display data">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark">2. Structure and summary</h6>
+                                <p class="card-text"><small class="text-muted">Click here to view a table that contains summary
+                                statistics of our dataset along with its structure.</small></p>
+                            </div>
+                        </div>
+                    </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 p-4">
+                            <img src="http://localhost:8080/images/clean.png" class="w-100 img-fluid" alt="Display data">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark">3. Clean the data</h6>
+                                <p class="card-text"><small class="text-muted">Click here to show the report of the cleaning data process
+                                in which we deleted duplicates and null values</small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                    <div class="row no-gutters">
+                        <div class="col-md-3 p-4">
+                            <img src="http://localhost:8080/images/skills.png" class="w-100 img-fluid" alt="Display data">
+                        </div>
+                        <div class="col-md-9">
+                            <div class="card-body">
+                                <h6 class="card-title text-dark">10. The most important skills required</h6>
+                                <p class="card-text"><small class="text-muted">Click here to print skills one by one and how many each
+                                    repeated and order the output to find out the most important skills required
+                                </small></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- How it works section-->
+<section id="how" class="bg-white py-5">
+    <div class="container">
+        <h5 class="pt-3">How it Works !</h5>
+        <div class="row p-4 align-items-center">
+            <div class="col-md-4 text-center">
+<!--            <img src="http://localhost:8080/images/spark.png" class="w-50 img-fluid" />-->
+                <p class="display-2">#1</p>
+                <p class="h6">Apache Spark</p>
+                <p class="py-3 text-muted">
+                    Apache Spark is an open-source, distributed processing system used for big data workloads.
+                </p>
+            </div>
+            <div class="col-md-4 text-center">
+<!--                <img src="http://localhost:8080/images/spring-2.png" class="w-50 img-fluid" />-->
+                <p class="display-2">#2</p>
+                <p class="h6">Springboot</p>
+                <p class="py-3 text-muted">
+                    Spring Boot helps developers create applications that just run.
+                </p>
+            </div>
+            <div class="col-md-4 text-center ">
+<!--                <img src="http://localhost:8080/images/mvc-2.png" class="w-100 img-fluid" />-->
+                <p class="display-2">#3</p>
+                <p class="h6">Patterns</p>
+                <p class="py-3 text-muted">
+                    We used MVC design pattrer along with POJO "getters and setters" and DAO "handle data access".
+                </p>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- Visualizations Section-->
+<section id="visualization" class="py-5 bg-light">
+    <div class="container">
+        <p class="h5 pt-4">Visualize and draw charts !</p>
+        <p class="text-muted mb-5"> Charts are often used to ease understanding of large quantities of data and the relationships
+            between parts of the data.</p>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/count.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">4. Count the jobs</h6>
+                                    <p class="card-text"><small class="text-muted">Count the jobs for each company and display
+                                        that in order (What are the most demanding companies for jobs?)
+                                    </small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/pie.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">5. Pie chart for count jobs</h6>
+                                    <p class="card-text"><small class="text-muted">Pie chart visualization that draws the jobs in each counrty
+                                        of step 4 in a chart.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/jobs.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">6. Most popular job titles</h6>
+                                    <p class="card-text"><small class="text-muted">Click here to show the most popular job
+                                    titles in the dataset.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/bar.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">7. Bar chart for popular jobs</h6>
+                                    <p class="card-text"><small class="text-muted">Visualize using bar chart the most popular job titles.
+                                    </small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/area.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">8. Find most popular areas</h6>
+                                    <p class="card-text"><small class="text-muted">Click here to show the most popular areas
+                                        in the dataset.</small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+            <div class="col-sm-6">
+                <a href="/sample" class="text-decoration-none">
+                    <div class="card mb-3 data_card">
+                        <div class="row no-gutters">
+                            <div class="col-md-3 p-4">
+                                <img src="http://localhost:8080/images/bar.png" class="w-100 img-fluid" alt="Display data">
+                            </div>
+                            <div class="col-md-9">
+                                <div class="card-body">
+                                    <h6 class="card-title text-dark">9. Bar chart for popular areas </h6>
+                                    <p class="card-text"><small class="text-muted">Visualize using bar chart the most popular areas.
+                                    </small></p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Contact us Section -->
+<section id="contact">
+    <div class="container py-5 bg-white">
+        <p class="h5 text-dark mb-5">Contact us</p>
+        <div class="row">
+            <div class="col-md-5">
+                <form>
+                    <div class="form-group">
+                        <label for="my-email">Email address</label>
+                        <input type="email" class="form-control" id="my-email" placeholder="name@something.com">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-subject">Subject</label>
+                        <input type="text" class="form-control" id="my-subject" placeholder="The thing is ...">
+                    </div>
+                    <div class="form-group">
+                        <label for="my-message">Message</label>
+                        <textarea class="form-control" id="my-message" rows="5"></textarea>
+                    </div>
+                    <div class="form-group">
+                        <button class="btn btn-primary">Send message</button>
+                    </div>
+                </form>
+            </div>
+            <div class="col-md-7">
+                <img src="http://localhost:8080/images/man.png" class="w-100 img-fluid" alt="Display data">
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Footer -->
+<footer class="bg-light p-2">
+    <span class="text-muted mx-4"> <small> ® all rights reserved to the ITI team java 😄 </small> </span>
+</footer>
+
+<!-- Add Table data or any other data from controller to sample page -->
+
+
+
+<!--Create all routes for data displaying and visualization-->
+
+
+
+
+</body>
+
+<script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+        integrity="sha512-HGOnQO9+SP1V92SrtZfjqxxtLmVzqZpjFFekvzZVWoiASSQgSr4cw9Kqd2+l8Llp4Gm0G8GIFJ4ddwZilcdb8A=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script type="text/javascript" src="../static/js/custom.js"></script>
+
+<script>
+    $('.slider').slick({
+        dots: true,
+        infinite: false,
+        speed: 300,
+        slidesToShow: 4,
+        slidesToScroll: 4,
+        responsive: [
+            {
+                breakpoint: 1224,
+                settings: {
+                    slidesToShow: 3,
+                    slidesToScroll: 3,
+                    infinite: true,
+                    dots: true
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 480,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+        ]
+    });
+</script>
+
+</html>
