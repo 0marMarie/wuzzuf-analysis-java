@@ -55,12 +55,12 @@
                 <h1 data-aos="fade-up">Wuzzuf Dataset Analysis
                     <span class="text-primary"> Java </span> for ML Course </h1>
                 <p data-aos="fade-up" data-aos-delay="400" class="text-muted my-4 py-3">
-                    We are team of java programmers trying to build websites using springboot </p>
+                    We are team of java programmers trying to build websites using springboot.</p>
                 <a class="btn btn-primary w-50" href="#how">
                     How it works !
                 </a>
             </div>
-            <div class="col-md-6 hero-img mb-auto" data-aos="zoom-out" data-aos-delay="200">
+            <div class="d-none d-md-block col-md-6 hero-img mb-auto" data-aos="zoom-out" data-aos-delay="200">
                 <img src="http://localhost:8080/images/8.svg" class="img-fluid" alt="">
             </div>
         </div>
@@ -148,14 +148,14 @@
         in the cards below we included tasks 1,2,3 and 10 of the final project.</p>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/sample" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                     <div class="row no-gutters">
-                        <div class="col-md-3 p-4">
+                        <div class="col-4 col-sm-3 p-4">
                             <img src="http://localhost:8080/images/data.png" class="w-100 img-fluid" alt="Display data">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-8 col-sm-9">
                             <div class="card-body">
                                 <h6 class="card-title text-dark">1. Display sample from dataset</h6>
                                 <p class="card-text"><small class="text-muted">Click here to view a table that contains some
@@ -166,14 +166,14 @@
                 </div>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/summary" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                     <div class="row no-gutters">
-                        <div class="col-md-3 p-4">
+                        <div class="col-4 col-sm-3 p-4">
                             <img src="http://localhost:8080/images/summary.png" class="w-100 img-fluid" alt="Display data">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-8 col-sm-9">
                             <div class="card-body">
                                 <h6 class="card-title text-dark">2. Structure and summary</h6>
                                 <p class="card-text"><small class="text-muted">Click here to view a table that contains summary
@@ -187,14 +187,14 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/clean" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                     <div class="row no-gutters">
-                        <div class="col-md-3 p-4">
+                        <div class="col-4 col-sm-3 p-4">
                             <img src="http://localhost:8080/images/clean.png" class="w-100 img-fluid" alt="Display data">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-8 col-sm-9">
                             <div class="card-body">
                                 <h6 class="card-title text-dark">3. Clean the data</h6>
                                 <p class="card-text"><small class="text-muted">Click here to show the report of the cleaning data process
@@ -205,14 +205,14 @@
                 </div>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/popular-skills" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                     <div class="row no-gutters">
-                        <div class="col-md-3 p-4">
+                        <div class="col-4 col-sm-3 p-4">
                             <img src="http://localhost:8080/images/skills.png" class="w-100 img-fluid" alt="Display data">
                         </div>
-                        <div class="col-md-9">
+                        <div class="col-8 col-sm-9">
                             <div class="card-body">
                                 <h6 class="card-title text-dark">10. The most important skills required</h6>
                                 <p class="card-text"><small class="text-muted">Click here to print skills one by one and how many each
@@ -453,7 +453,7 @@
     $('.slider').slick({
         dots: true,
         infinite: false,
-        speed: 300,
+        speed: 400,
         slidesToShow: 4,
         slidesToScroll: 4,
         responsive: [
@@ -467,7 +467,7 @@
                 }
             },
             {
-                breakpoint: 600,
+                breakpoint: 770,
                 settings: {
                     slidesToShow: 2,
                     slidesToScroll: 2
@@ -477,7 +477,9 @@
                 breakpoint: 480,
                 settings: {
                     slidesToShow: 1,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    infinite: false,
+                    dots: false
                 }
             }
         ]

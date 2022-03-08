@@ -18,15 +18,15 @@
 <body>
 
 <div class="limiter">
-    <div class="py-3 row">
-        <div class="h6 col-md-5 ">
+    <div class="py-3 ">
+        <div class="h6  ">
             <a href="/" class="text-dark text-left p-3 m-3">
                 <img src="http://localhost:8080/images/arrow-left-solid.svg" width="15" class="mr-2"/>
                 Go back
             </a>
         </div>
-        <div class="col-md-7">
-            <p class="text-dark h5"> Cleaning of the dataset</p>
+        <div class="text-center">
+            <p class="text-dark h5"> Cleaning dataset "count report"</p>
         </div>
     </div>
 
@@ -48,16 +48,17 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="row: ${rows}">
-                        <td th:text="${row.summary}" class="column9 text-dark"  ></td>
-                        <td th:text="${row.title}" class="column1" ></td>
+                    <tr th:each="row: ${rows}" th:if="${row.summary == 'count'}">
+
+                        <td th:text="${row.summary} " class="column9 text-dark"  ></td>
+                        <td th:text="${row.title}?: '0'" class="column1" ></td>
                         <td th:text="${row.company}" class="column2" ></td>
-                        <td th:text="${row.location}" class="column3"></td>
-                        <td th:text="${row.type}" class="column4">Full Time</td>
-                        <td th:text="${row.level}" class="column5">Manager</td>
-                        <td th:text="${row.yearsExp}" class="column6">5-10 Years of Exp</td>
-                        <td th:text="${row.country}" class="column7">Giza</td>
-                        <td th:text="${row.skills}" class="column8" >Call center, Custom Service, English, Call center, Custom Service, English</td>
+                        <td th:text="${row.location}?: '0'" class="column3"></td>
+                        <td th:text="${row.type}?: '0'" class="column4">Full Time</td>
+                        <td th:text="${row.level}?: '0'" class="column5">Manager</td>
+                        <td th:text="${row.yearsExp}?: '0'" class="column6">5-10 Years of Exp</td>
+                        <td th:text="${row.country}?: '0'" class="column7">Giza</td>
+                        <td th:text="${row.skills}?: '0'" class="column8" >Call center, Custom Service, English, Call center, Custom Service, English</td>
                     </tr>
                     </tbody>
                 </table>
