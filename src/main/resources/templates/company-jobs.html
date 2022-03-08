@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Wuzzuf Analysis - Jobs</title>
+    <title>Wuzzuf Analysis - Company Jobs</title>
     <link rel="stylesheet" type="text/css" href="/css/custom.css"/>
     <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
 
@@ -24,7 +24,7 @@
             </a>
         </div>
         <div class="col-md-7">
-            <p class="text-dark h5"> Jobs of the dataset</p>
+            <p class="text-dark h5"> Company - jobs count</p>
         </div>
     </div>
 
@@ -32,8 +32,17 @@
         <div class="wrap-table100">
             <div class="table100">
                 <table>
+                    <thead>
+                    <tr class="table100-head">
+                        <th class="column9">Attribute</th>
+                        <th class="column1">Count</th>
+                    </tr>
+                    </thead>
                     <tbody>
-
+                    <tr th:each="row: ${rows}">
+                        <td th:text="${row.attribute}" class="column9 text-dark"  ></td>
+                        <td th:text="${row.count}" class="column1" ></td>
+                       </tr>
                     </tbody>
                 </table>
             </div>
