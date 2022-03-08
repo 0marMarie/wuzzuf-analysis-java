@@ -1,14 +1,20 @@
 package com.example.wuzzufdataanalysis.bootStrapData;
 
-import com.example.wuzzufdataanalysis.model.RowEntity;
-import com.example.wuzzufdataanalysis.model.SummaryEntity;
-import com.example.wuzzufdataanalysis.model.cleanDataEntity;
+import com.example.wuzzufdataanalysis.model.*;
 import com.example.wuzzufdataanalysis.repositories.*;
 import org.apache.spark.sql.Dataset;
+import org.apache.spark.sql.Encoders;
 import org.apache.spark.sql.Row;
 import org.apache.spark.sql.SparkSession;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.stereotype.Component;
+
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
+
+import static org.apache.spark.sql.functions.col;
+import static org.apache.spark.sql.functions.count;
 
 
 @Component
@@ -18,17 +24,17 @@ public class BootStrapData implements CommandLineRunner {
     private final SummaryEntityRepository summaryEntityRepository;
     private final CompanyJobsEntityRepository CompanyJobsEntityRepository;
     private final cleanDataEntityRepository cleanDataEntityRepository;
-    private final CompanyJobsEntityRepository companyJobsEntityRepository;
+    private final AreasEntityRepository areasEntityRepository;
     private final JobTitleEntityRepository jobTitleEntityRepository;
     private final SkillsEntityRepository skillsEntityRepository;
 
 
-    public BootStrapData(RowEntityRepository rowEntityRepository, SummaryEntityRepository summaryEntityRepository, CompanyJobsEntityRepository aggEntityRepository, cleanDataEntityRepository cleanDataEntityRepositor, com.example.wuzzufdataanalysis.repositories.CompanyJobsEntityRepository companyJobsEntityRepository, JobTitleEntityRepository jobTitleEntityRepository, SkillsEntityRepository skillsEntityRepository) {
+    public BootStrapData(RowEntityRepository rowEntityRepository, SummaryEntityRepository summaryEntityRepository, CompanyJobsEntityRepository aggEntityRepository, cleanDataEntityRepository cleanDataEntityRepositor, com.example.wuzzufdataanalysis.repositories.CompanyJobsEntityRepository companyJobsEntityRepository, AreasEntityRepository areasEntityRepository, JobTitleEntityRepository jobTitleEntityRepository, SkillsEntityRepository skillsEntityRepository) {
         this.rowEntityRepository = rowEntityRepository;
         this.summaryEntityRepository = summaryEntityRepository;
         this.CompanyJobsEntityRepository = aggEntityRepository;
         this.cleanDataEntityRepository = cleanDataEntityRepositor;
-        this.companyJobsEntityRepository = companyJobsEntityRepository;
+        this.areasEntityRepository = areasEntityRepository;
         this.jobTitleEntityRepository = jobTitleEntityRepository;
         this.skillsEntityRepository = skillsEntityRepository;
     }
@@ -89,6 +95,52 @@ public class BootStrapData implements CommandLineRunner {
                     s.getString(8)
             );
             cleanDataEntityRepository.save(cleanDataEntity);
+        });
+
+        Dataset<Row> jobsPerCompany = dataSet.groupBy("Company").agg(count("Title")).orderBy(col("count(Title)").desc());
+        jobsPerCompany.toLocalIterator().forEachRemaining(s->{
+            CompanyJobsEntity companyJobsEntity = new CompanyJobsEntity(
+                    s.getString(0),
+                    String.valueOf(s.getLong(1))
+            );
+
+            CompanyJobsEntityRepository.save(companyJobsEntity);
+        });
+
+        Dataset<Row> popularJobs = dataSet.groupBy("Title").agg(count("Title")).orderBy(col("count(Title)").desc());
+        popularJobs.toLocalIterator().forEachRemaining(s->{
+            JobTitleEntity jobTitleEntity = new JobTitleEntity(
+                    s.getString(0),
+                    String.valueOf(s.getLong(1))
+            );
+
+            jobTitleEntityRepository.save(jobTitleEntity);
+        });
+
+        Dataset<Row> popularAreas = dataSet.groupBy("Location").agg(count("Location")).orderBy(col("count(Location)").desc());
+        popularAreas.toLocalIterator().forEachRemaining(s->{
+            AreasEntity areasEntity = new AreasEntity(
+                    s.getString(0),
+                    String.valueOf(s.getLong(1))
+            );
+
+            areasEntityRepository.save(areasEntity);
+        });
+
+        List<String> allSkills = new ArrayList<String>();
+        dataSet.select("Skills").toLocalIterator().forEachRemaining(s -> {
+            List<String> skills = Arrays.asList(s.getString(0).split(","));
+            allSkills.addAll(skills);
+        });
+        Dataset<Row> Allskills = sparkSession.createDataset(allSkills, Encoders. STRING()).toDF("Skill");
+        Allskills = Allskills.groupBy("Skill").agg(count("Skill")).orderBy(col("count(Skill)").desc());
+        Allskills.toLocalIterator().forEachRemaining(s->{
+            SkillsEntity skillsEntity = new SkillsEntity(
+                    s.getString(0),
+                    String.valueOf(s.getLong(1))
+            );
+
+            skillsEntityRepository.save(skillsEntity);
         });
 
     }

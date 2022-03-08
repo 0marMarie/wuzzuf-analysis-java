@@ -9,9 +9,16 @@
   width: 280px;
 }
 
+.column9 {
+  width: 100px;
+}
+
 @media only screen and (max-width: 992px) {
   /* For mobile phones: */
   [class*="column8"] {
+    width: 100%;
+  }
+  [class*="column9"] {
     width: 100%;
   }
 }
@@ -44,6 +51,7 @@ table {
   margin: 0 auto;
   position: relative;
 }
+
 table * {
   position: relative;
 }

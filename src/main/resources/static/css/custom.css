@@ -9,6 +9,11 @@ html {
     color: #4D4D4D !important;
 }
 
+.custom-bg-color{
+    background-color: #eef4f7;
+}
+
+
 .hero{
     display: flex;
     flex-direction: column;
