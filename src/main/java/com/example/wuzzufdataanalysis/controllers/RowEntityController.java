@@ -102,15 +102,14 @@ public class RowEntityController {
         List<Long> countList = new ArrayList<Long>();
         final int[] j = {0};
         jobTitleEntityRepository.findAll().forEach(s->{
-            if (i[0] < 10) {titlesList.add(s.getCount());}
-            i[0] += 1;
+            if (j[0] < 10) {countList.add(Long.parseLong(s.getCount()));}
+            j[0] += 1;
         });
 
         // Series
         chart.addSeries("Job Title Count", titlesList, countList);
 
-        BitmapEncoder.saveBitmap(chart, "src/main/resources/static/popularJobs", BitmapEncoder.BitmapFormat.JPG);
-
+        BitmapEncoder.saveBitmap(chart, "src/main/resources/static/images/popularJobsBar", BitmapEncoder.BitmapFormat.JPG);
 
         return "jobs-barchart";
     }
