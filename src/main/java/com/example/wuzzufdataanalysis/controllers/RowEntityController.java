@@ -115,7 +115,7 @@ public class RowEntityController {
     }
 
 
-    @RequestMapping("areas-barchart")
+    @RequestMapping("/areas-barchart")
     public String getAreasBarChart(Model model) throws IOException {
 
         // Create Chart
@@ -135,14 +135,14 @@ public class RowEntityController {
         List<Long> countList = new ArrayList<Long>();
         final int[] j = {0};
         areasEntityRepository.findAll().forEach(s->{
-            if (i[0] < 10) {titlesList.add(s.getCount());}
-            i[0] += 1;
+            if (j[0] < 10) {countList.add(Long.parseLong(s.getCount()));}
+            j[0] += 1;
         });
 
         // Series
         chart.addSeries("Area Count", titlesList, countList);
 
-        BitmapEncoder.saveBitmap(chart, "src/main/resources/static/popularAreas", BitmapEncoder.BitmapFormat.JPG);
+        BitmapEncoder.saveBitmap(chart, "src/main/resources/static/images/popularAreasBar", BitmapEncoder.BitmapFormat.JPG);
 
 
 
@@ -167,11 +167,8 @@ public class RowEntityController {
             i[0] += 1;
         });
 
-        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/jobsForEachCompany", BitmapEncoder.BitmapFormat.JPG);
+        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/images/companyJobsPie", BitmapEncoder.BitmapFormat.JPG);
 
-
-
-
-        return "company-jobs-piechart/index";
+        return "company-jobs-piechart";
     }
 }
