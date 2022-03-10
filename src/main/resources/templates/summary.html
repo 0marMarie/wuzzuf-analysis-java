@@ -50,14 +50,14 @@
                     <tbody>
                     <tr th:each="row: ${rows}">
                         <td th:text="${row.summary}" class="column9 text-dark"  ></td>
-                        <td th:text="${row.title}?: '0'" class="column1" ></td>
+                        <td th:text="${row.title}?: 'Null'" class="column1" ></td>
                         <td th:text="${row.company}" class="column2" ></td>
-                        <td th:text="${row.location}?: '0'" class="column3"></td>
-                        <td th:text="${row.type}?: '0'" class="column4">Full Time</td>
-                        <td th:text="${row.level}?: '0'" class="column5">Manager</td>
-                        <td th:text="${row.yearsExp}?: '0'" class="column6">5-10 Years of Exp</td>
-                        <td th:text="${row.country}?: '0'" class="column7">Giza</td>
-                        <td th:text="${row.skills}?: '0'" class="column8" >Call center, Custom Service, English, Call center, Custom Service, English</td>
+                        <td th:text="${row.location}?: 'Null'" class="column3"></td>
+                        <td th:text="${row.type}?: 'Null'" class="column4">Full Time</td>
+                        <td th:text="${row.level}?: 'Null'" class="column5">Manager</td>
+                        <td th:text="${row.yearsExp}?: 'Null'" class="column6">5-10 Years of Exp</td>
+                        <td th:text="${row.country}?: 'Null'" class="column7">Giza</td>
+                        <td th:text="${row.skills}?: 'Null'" class="column8" >Call center, Custom Service, English, Call center, Custom Service, English</td>
                     </tr>
                     </tbody>
                 </table>

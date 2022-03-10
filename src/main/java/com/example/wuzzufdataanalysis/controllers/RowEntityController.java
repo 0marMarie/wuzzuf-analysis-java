@@ -144,8 +144,6 @@ public class RowEntityController {
 
         BitmapEncoder.saveBitmap(chart, "src/main/resources/static/images/popularAreasBar", BitmapEncoder.BitmapFormat.JPG);
 
-
-
         return "areas-barchart";
     }
 
@@ -159,15 +157,13 @@ public class RowEntityController {
         chart.getStyler().setSeriesColors(sliceColors);
 
 
-
-
         final int[] i = {0};
         companyJobsEntityRepository.findAll().forEach(s->{
             if(i[0] < 7){chart.addSeries(s.getAttribute(), Long.parseLong(s.getCount()));}
             i[0] += 1;
         });
 
-        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/images/companyJobsPie", BitmapEncoder.BitmapFormat.JPG);
+        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/images/companyyJobsPie", BitmapEncoder.BitmapFormat.PNG);
 
         return "company-jobs-piechart";
     }

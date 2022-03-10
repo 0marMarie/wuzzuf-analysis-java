@@ -15,6 +15,16 @@
 
     <link rel="icon" href="http://localhost:8080/images/logo.png">
 
+    <style>
+        .slick-dots li button:before{
+            font-size: 12px !important;
+            color: #333 !important;
+        }
+        .slick-next:before, .slick-prev:before{
+            color: #333 !important;
+        }
+    </style>
+
 </head>
 <body>
 
@@ -83,7 +93,7 @@
                     <a href="" >
                         <div class="box">
                             <img class="rounded-circle img-fluid w-75 mx-auto d-block" src="http://localhost:8080/images/amr.jpg">
-                            <h6 class="name text-dark">Dr.Amr El-Shafeay</h6>
+                            <h6 class="name text-dark">Mr.Amr El-Shafey</h6>
                             <p class="title">Supervisor</p>
                             <p class="description text-muted">Chairman assistant for training and java department head at ITI. </p>
                             <div class="social"><a href="#"><i class="fa fa-facebook-official"></i></a><a href="#"><i class="fa fa-twitter"></i></a><a href="#"><i class="fa fa-linkedin"></i></a></div>
@@ -232,29 +242,31 @@
 
 <!-- How it works section-->
 <section id="how" class="bg-white py-5">
-    <div class="container">
-        <h5 class="pt-3">How it Works !</h5>
+    <div class="container text-center">
+        <h5 class="pt-3 header-color-custom">How it Works !</h5>
+        <p class="text-muted mb-5"> Libraries, frameworks and design patterns used in the server side of the website
+            to make things work.</p>
         <div class="row p-4 align-items-center">
             <div class="col-md-4 text-center">
-<!--            <img src="http://localhost:8080/images/spark.png" class="w-50 img-fluid" />-->
-                <p class="display-2">#1</p>
-                <p class="h6">Apache Spark</p>
+            <img src="http://localhost:8080/images/spark.png" class="w-25 img-fluid" />
+<!--                <p class="display-2">1.</p>-->
+                <p class="h6 mt-4">Apache Spark</p>
                 <p class="py-3 text-muted">
                     Apache Spark is an open-source, distributed processing system used for big data workloads.
                 </p>
             </div>
             <div class="col-md-4 text-center">
-<!--                <img src="http://localhost:8080/images/spring-2.png" class="w-50 img-fluid" />-->
-                <p class="display-2">#2</p>
-                <p class="h6">Springboot</p>
+                <img src="http://localhost:8080/images/spring.png" class="w-25 img-fluid" />
+<!--                <p class="display-2">2.</p>-->
+                <p class="h6 mt-4">Spring Boot</p>
                 <p class="py-3 text-muted">
-                    Spring Boot helps developers create applications that just run.
+                    Spring Boot helps developers create applications that just run and it uses the mvc.
                 </p>
             </div>
             <div class="col-md-4 text-center ">
-<!--                <img src="http://localhost:8080/images/mvc-2.png" class="w-100 img-fluid" />-->
-                <p class="display-2">#3</p>
-                <p class="h6">Patterns</p>
+                <img src="http://localhost:8080/images/pattern.png" class="w-25 img-fluid" />
+<!--                <p class="display-2">3.</p>-->
+                <p class="h6 mt-4">Patterns</p>
                 <p class="py-3 text-muted">
                     We used MVC design pattrer along with POJO "getters and setters" and DAO "handle data access".
                 </p>
@@ -267,19 +279,19 @@
 <!-- Visualizations Section-->
 <section id="visualization" class="py-5 bg-light">
     <div class="container">
-        <p class="h5 pt-4">Visualize and draw charts !</p>
+        <p class="h5 pt-4 header-color-custom">Visualize and draw charts !</p>
         <p class="text-muted mb-5"> Charts are often used to ease understanding of large quantities of data and the relationships
             between parts of the data.</p>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/company-jobs" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/count.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">4. Count the jobs</h6>
                                     <p class="card-text"><small class="text-muted">Count the jobs for each company and display
@@ -291,14 +303,14 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/company-jobs-piechart" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/pie.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">5. Pie chart for count jobs</h6>
                                     <p class="card-text"><small class="text-muted">Pie chart visualization that draws the jobs in each counrty
@@ -312,14 +324,14 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/popular-jobs" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/jobs.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">6. Most popular job titles</h6>
                                     <p class="card-text"><small class="text-muted">Click here to show the most popular job
@@ -330,14 +342,14 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/jobs-barchart" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/bar.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">7. Bar chart for popular jobs</h6>
                                     <p class="card-text"><small class="text-muted">Visualize using bar chart the most popular job titles.
@@ -351,14 +363,14 @@
         </div>
 
         <div class="row">
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/popular-areas" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/area.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">8. Find most popular areas</h6>
                                     <p class="card-text"><small class="text-muted">Click here to show the most popular areas
@@ -369,14 +381,14 @@
                     </div>
                 </a>
             </div>
-            <div class="col-sm-6">
+            <div class="col-md-6">
                 <a href="/areas-barchart" class="text-decoration-none">
                     <div class="card mb-3 data_card">
                         <div class="row no-gutters">
-                            <div class="col-md-3 p-4">
+                            <div class="col-4 col-sm-3 p-4">
                                 <img src="http://localhost:8080/images/bar.png" class="w-100 img-fluid" alt="Display data">
                             </div>
-                            <div class="col-md-9">
+                            <div class="col-8 col-sm-9">
                                 <div class="card-body">
                                     <h6 class="card-title text-dark">9. Bar chart for popular areas </h6>
                                     <p class="card-text"><small class="text-muted">Visualize using bar chart the most popular areas.
@@ -396,17 +408,17 @@
 <!-- Contact us Section -->
 <section id="contact">
     <div class="container py-5 bg-white">
-        <p class="h5 text-dark mb-5">Contact us</p>
+        <p class="h5 text-dark mb-5 header-color-custom">Contact us</p>
         <div class="row">
             <div class="col-md-5">
-                <form>
+                <form action="mailto:omar7amed440@gmail.com" method="GET" target="_blank">
                     <div class="form-group">
                         <label for="my-email">Email address</label>
                         <input type="email" class="form-control" id="my-email" placeholder="name@something.com">
                     </div>
                     <div class="form-group">
-                        <label for="my-subject">Subject</label>
-                        <input type="text" class="form-control" id="my-subject" placeholder="The thing is ...">
+                        <label for="subject">Subject</label>
+                        <input type="text" class="form-control" id="subject" placeholder="The thing is ...">
                     </div>
                     <div class="form-group">
                         <label for="my-message">Message</label>
@@ -427,7 +439,7 @@
 
 <!-- Footer -->
 <footer class="bg-light p-2">
-    <span class="text-muted mx-4"> <small> ® all rights reserved to the ITI team java 😄 </small> </span>
+    <span class="text-muted mx-4"> <small> ® all rights reserved to the ITI team java. </small> </span>
 </footer>
 
 <!-- Add Table data or any other data from controller to sample page -->
@@ -451,8 +463,9 @@
 
 <script>
     $('.slider').slick({
+        autoplay: true,
         dots: true,
-        infinite: false,
+        infinite: true,
         speed: 400,
         slidesToShow: 4,
         slidesToScroll: 4,
