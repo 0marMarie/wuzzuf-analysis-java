@@ -49,7 +49,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="row: ${rows}">
+                    <tr th:each="row: ${rows}" th:if="${row.summary == 'count' || row.summary == 'min' || row.summary == 'max'}">
                         <td th:text="${row.summary}" class="column9 text-dark"  ></td>
                         <td th:text="${row.title}?: 'Null'" class="column1" ></td>
                         <td th:text="${row.company}" class="column2" ></td>

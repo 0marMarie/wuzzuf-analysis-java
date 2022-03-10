@@ -35,6 +35,7 @@
     <div class="container-table100 text-center" style="align-items: unset !important;">
         <div class="wrap-table100 ">
             <div class="table100">
+                <p class="text-left">After cleaning the dataset the summary is: </p>
                 <table>
                     <thead>
                     <tr class="table100-head">
@@ -50,7 +51,7 @@
                     </tr>
                     </thead>
                     <tbody>
-                    <tr th:each="row: ${rows}" th:if="${row.summary == 'count'}">
+                    <tr th:each="row: ${rows}" th:if="${row.summary == 'count' || row.summary == 'min' || row.summary == 'max'}">
 
                         <td th:text="${row.summary} " class="column9 text-dark"  ></td>
                         <td th:text="${row.title}?: '0'" class="column1" ></td>
