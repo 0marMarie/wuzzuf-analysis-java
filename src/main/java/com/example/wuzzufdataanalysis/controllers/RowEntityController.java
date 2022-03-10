@@ -153,7 +153,7 @@ public class RowEntityController {
         PieChart chart = new PieChartBuilder().width(800).height(600).title(getClass().getSimpleName()).build();
 
         // Customize Chart
-        Color[] sliceColors = new Color[] { new Color(224, 68, 14), new Color(230, 105, 62), new Color(236, 143, 110), new Color(243, 180, 159), new Color(246, 199, 182) };
+        Color[] sliceColors = new Color[] { new Color(32, 133, 236), new Color(114, 180, 235), new Color(10, 65, 122), new Color(132, 100, 160), new Color(206, 169, 188), new Color(60, 60, 60), new Color(20, 20, 20) };
         chart.getStyler().setSeriesColors(sliceColors);
 
 
@@ -163,7 +163,7 @@ public class RowEntityController {
             i[0] += 1;
         });
 
-        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/images/companyyJobsPie", BitmapEncoder.BitmapFormat.PNG);
+        BitmapEncoder.saveBitmap(chart, "./src/main/resources/static/images/componyJobsPie", BitmapEncoder.BitmapFormat.JPG);
 
         return "company-jobs-piechart";
     }
