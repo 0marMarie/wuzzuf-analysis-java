@@ -5,6 +5,8 @@ import com.example.wuzzufdataanalysis.repositories.*;
 import org.apache.spark.sql.Row;
 import org.knowm.xchart.*;
 import org.knowm.xchart.style.Styler;
+import org.springframework.data.domain.PageRequest;
+import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -41,7 +43,8 @@ public class RowEntityController {
 
     @RequestMapping("/sample")
     public String getData(Model model){
-        model.addAttribute("rows", rowEntityRepository.findAll());
+        Pageable limit = PageRequest.of(0,30);
+        model.addAttribute("rows", rowEntityRepository.findAll(limit));
         return "sample";
     }
 
@@ -60,13 +63,17 @@ public class RowEntityController {
 
     @RequestMapping("/company-jobs")
     public String getJobsPerCompany(Model model){
-        model.addAttribute("rows", companyJobsEntityRepository.findAll());
+        Pageable limit = PageRequest.of(0,40);
+
+        model.addAttribute("rows", companyJobsEntityRepository.findAll(limit));
         return "company-jobs";
     }
 
     @RequestMapping("/popular-jobs")
     public String getPopularJobs(Model model){
-        model.addAttribute("rows", jobTitleEntityRepository.findAll());
+        Pageable limit = PageRequest.of(0,40);
+
+        model.addAttribute("rows", jobTitleEntityRepository.findAll(limit));
         return "popular-jobs";
     }
 
@@ -78,7 +85,9 @@ public class RowEntityController {
 
     @RequestMapping("/popular-skills")
     public String getPopularSkills(Model model){
-        model.addAttribute("rows", skillsEntityRepository.findAll());
+        Pageable limit = PageRequest.of(0,40);
+
+        model.addAttribute("rows", skillsEntityRepository.findAll(limit));
         return "popular-skills";
     }
 
