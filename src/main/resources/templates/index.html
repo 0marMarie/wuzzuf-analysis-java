@@ -421,25 +421,25 @@
         <p class="h5 text-dark mb-5 header-color-custom">Contact us</p>
         <div class="row">
             <div class="col-md-5">
-                <form action="mailto:omar7amed440@gmail.com" method="GET" target="_blank">
+                <form class="needs-validation" action="mailto:omar7amed440@gmail.com" method="GET" target="_blank">
                     <div class="form-group">
                         <label for="my-email">Email address</label>
-                        <input type="email" class="form-control" id="my-email" placeholder="name@something.com">
+                        <input type="email" class="form-control" id="my-email" placeholder="name@something.com" required>
                     </div>
                     <div class="form-group">
                         <label for="subject">Subject</label>
-                        <input type="text" class="form-control" id="subject" placeholder="The thing is ...">
+                        <input type="text" class="form-control" id="subject" placeholder="The thing is ..." required>
                     </div>
                     <div class="form-group">
                         <label for="my-message">Message</label>
-                        <textarea class="form-control" id="my-message" rows="5"></textarea>
+                        <textarea class="form-control" id="my-message" rows="5" required></textarea>
                     </div>
                     <div class="form-group">
                         <button class="btn btn-primary">Send message</button>
                     </div>
                 </form>
             </div>
-            <div class="col-md-7">
+            <div class="d-none d-md-block  col-md-7">
                 <img src="http://localhost:8080/images/man.png" class="w-100 img-fluid" alt="Display data">
 
             </div>
