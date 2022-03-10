@@ -79,7 +79,9 @@ public class RowEntityController {
 
     @RequestMapping("/popular-areas")
     public String getPopularAreas(Model model){
-        model.addAttribute("rows", areasEntityRepository.findAll());
+        Pageable limit = PageRequest.of(0,30);
+
+        model.addAttribute("rows", areasEntityRepository.findAll(limit));
         return "popular-areas";
     }
 
@@ -98,8 +100,11 @@ public class RowEntityController {
         CategoryChart chart = new CategoryChartBuilder().width(800).height(600).title("Popular Job Titles").xAxisTitle("Titles").yAxisTitle("Count").build();
 
         // Customize Chart
+        chart.getStyler().setSeriesColors(new Color[]{new Color(0,63,92), new Color(24,43,124)});
+
         chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNE);
         chart.getStyler().setXAxisLabelRotation(45);
+
 
         List<String> titlesList = new ArrayList<String>();
         final int[] i = {0};
@@ -133,6 +138,8 @@ public class RowEntityController {
         // Customize Chart
         chart.getStyler().setLegendPosition(Styler.LegendPosition.InsideNE);
         chart.getStyler().setXAxisLabelRotation(45);
+        chart.getStyler().setSeriesColors(new Color[]{new Color(88,80,141), new Color(24,43,124)});
+
 
         List<String> titlesList = new ArrayList<String>();
         final int[] i = {0};
