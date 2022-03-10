@@ -75,7 +75,8 @@ https://www.kaggle.com/omarhanyy/wuzzuf-jobs
 ## 👨🏼‍🏫 Contributing -  Supervisor
 `Mr. Amr El-Shafey`
 
-## Screenshots
+## 📸 Screenshots
+<br>
 Hero Section:
 
 ![Screenshot](Screenshots/hero.png)
