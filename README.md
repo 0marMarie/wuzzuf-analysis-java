@@ -1,4 +1,4 @@
-# 🤔 Installing and Running the project
+## 🤔 Installing and Running the project
 
 To install the project you just need to `clone` it then `build` and `run` using your favourite
 ide. <br>
