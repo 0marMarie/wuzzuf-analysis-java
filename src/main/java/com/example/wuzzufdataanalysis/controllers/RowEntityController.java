@@ -48,7 +48,6 @@ public class RowEntityController {
         return "sample";
     }
 
-    // There is no structue ?!
     @RequestMapping("/summary")
     public String getSummary(Model model){
         model.addAttribute("rows", summaryEntityRepository.findAll());
